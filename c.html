@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Section Example</title>
+    <style>
+        /* Basic reset and font setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* Parent Container */
+        .split-container {
+            display: flex;
+            align-items: center;        /* Centers text vertically next to the photo */
+            gap: 40px;                  /* Gap between photo and text */
+            max-width: 1100px;          /* Prevents layout from getting too wide */
+            margin: 0 auto;             /* Centers the container on the screen */
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Equal width distribution for both columns */
+        .split-image, 
+        .split-text {
+            flex: 1;
+        }
+
+        /* Image styling */
+        .split-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;         /* Smooth rounded corners for the photo */
+        }
+
+        /* Text layout adjustments */
+        .split-text h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #111111;
+        }
+        .split-text p {
+            font-size: 1.1rem;
+            color: #555555;
+        }
+
+        /* Mobile Responsive View */
+        @media (max-width: 768px) {
+            .split-container {
+                flex-direction: column; /* Stacks image on top of text on smaller screens */
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-container">
+        <!-- Left Side: Photo -->
+        <div class="split-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" alt="Beautiful landscape walk beside a lake at sunset">
+        </div>
+        
+        <!-- Right Side: Paragraph -->
+        <div class="split-text">
+            <h2>Serene Lakeside View</h2>
+            <p>This layout neatly positions a high-quality visual alongside descriptive text. On desktop screens, the two sides remain perfectly balanced and vertically aligned. On mobile viewports, the columns naturally stack into a single, easily scrollable column so your design never breaks.</p>
+        </div>
+    </div>
+
+</body>
+</html>
